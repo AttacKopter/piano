@@ -1,0 +1,21 @@
+[package]
+name = "piano"
+version = "0.1.0"
+authors = ["AttacKopter <maximus.rzepka@gmail.com>"]
+license = "MIT"
+build = "build.rs"
+edition = "2018"
+exclude = ["artifacts.json", "index.node"]
+
+[lib]
+name = "piano"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+neon-build = "0.10.1"
+
+[dependencies]
+neon = "0.10.1"
+midly = "0.5.3"
+pwm-pca9685 = "0.3.1"
+linux-embedded-hal = "0.3.2"
